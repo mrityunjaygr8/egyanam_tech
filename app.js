@@ -1,6 +1,6 @@
-require('newrelic');
 var dotenv = require('dotenv');
 dotenv.load();
+require('newrelic');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
