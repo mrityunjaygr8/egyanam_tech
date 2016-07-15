@@ -1,0 +1,108 @@
+@import 'normalize';
+@import 'skeleton';
+@import 'fa';
+
+body{
+  padding: 0;
+  margin: 0;
+  color: #222;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #222;
+
+  &:hover{
+    color: #222;
+  }
+}
+
+
+.base{
+    position: relative;
+    height: 100vh;
+    background: firebrick;
+
+    &.left{
+        margin-top: 100px;
+        background: #333;
+        z-index: 0;
+        height: 35vh;
+    }
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fedcba;
+    height: 100px;
+    z-index: 1;
+}
+
+.brand{
+    position: relative;
+    z-index: 3;
+    margin-top: 1rem;
+
+    &.full{
+        text-align: center;
+        position: relative;
+        z-index: 4;
+    }
+
+    &.tech-out{
+        display: none;
+    }
+
+    &.tech-in{
+        display: inline-block;
+    }
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 800px) {
+    .base{
+        &.left{
+            margin-top: 0;
+            // z-index: 4;
+            height: 100vh;
+        }
+    }
+
+    .brand{
+        &.tech-in{
+            display: none;
+        }
+
+        &.tech-out{
+            display: block;
+        }
+
+        &.full{
+            text-align: right;
+            padding-right: 1rem;
+        }
+    }
+
+    .nav{
+        height: 70px;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .nav{
+        height: 100px;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
