@@ -3,24 +3,59 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title><%= title %></title>
-        <!-- <link rel='stylesheet' href='/stylesheets/normalize.css'> -->
-        <!-- <link rel="stylesheet" href="/stylesheets/skeleton.css"> -->
         <link rel='stylesheet' href='stylesheets/style.css' />
-        <!-- <link rel="stylesheet" href="stylesheets/font-awesome.min.css"> -->
+
     </head>
     <body>
-        <div class="row">
-            <div class="columns twelve nav">
-                <div class="columns three">
-                    <p class="h1 brand full"><a href="#">eGyanam <span class="brand tech-in">Tech</span></a></p>
+        <div class="site-wrapper" >
+            <div class="row">
+                <div class="columns twelve nav">
+                    <div class="columns three brand-wrapper">
+
+                        <p class="h1 brand mobile">
+                            <a href="#">eGyanam Tech</a>
+                            <a href="#" class="pull-right toggle-panel"><i class="fa fa-bars"></i></a>
+                        </p>
+
+                        <p class="h1 brand full no-mobile">
+                            <a href="#">eGyanam</a>
+                        </p>
+                    </div>
+                    <div class="columns two">
+                        <span class="brand tech-out h1 brand">
+                            <a href="#">Tech</a>
+                        </span>
+                    </div>
+
+                    <div class="pull-right columns one no-mobile">
+                        <div class="toggle-wrapper brand">
+                            <a href="#" class="toggle-nav toggle-panel"><i class="fa fa-bars"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div><span class="brand tech-out h1 brand"><a href="#">Tech</a></span></div>
+            </div>
+            <div class="row" id="site-wrapper">
+                <div id="scotch-panel"></div>
+                <div class="columns three base left">
+                    <div class="columns twelve">
+                        <p class="h1 brand full no-mobile"><a href="#">eGyanam</a></p>
+                    </div>
+                </div>
+                <div class="columns nine base right pull-right" id="right-panel">
+                </div>
+
+                <div class="site-menu" id="site-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="columns three base left"></div>
-            <div class="columns nine base right">
-            </div>
-        </div>
+        <script type="text/javascript" src="/javascripts/jquery.js"></script>
+        <script type="text/javascript" src="/javascripts/scotchPanels.min.js"></script>
+        <script type="text/javascript" src="/javascripts/script.js"></script>
     </body>
 </html>
