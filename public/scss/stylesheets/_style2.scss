@@ -1,0 +1,259 @@
+@import 'normalize';
+@import 'skeleton';
+@import 'fa';
+
+@font-face {
+    font-family:'Raleway';
+    src:url('../../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family:'Lobster';
+    src:url('../../fonts/Lobster-Regular.ttf');
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  color: #222;
+  font: 14px "Raleway", Helvetica, Arial, sans-serif;
+  background: #abcdef;
+}
+
+a{
+  text-decoration: none;
+  color: #222;
+
+  &:hover{
+    color: #951753;
+  }
+}
+
+
+.base{
+    position: relative;
+    height: 100vh;
+    background: firebrick;
+
+    &.left{
+        margin-top: 100px;
+        background: #333;
+        z-index: 0;
+        height: 35vh;
+    }
+
+
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fedcba;
+    height: 100px;
+    z-index: 1;
+}
+
+.brand{
+    position: relative;
+    z-index: 3;
+    margin-top: 1rem;
+    font-family: 'Lobster';
+
+    &.full{
+        text-align: center;
+        position: relative;
+        z-index: 4;
+    }
+
+    &.tech-out{
+        display: none;
+    }
+
+    &.tech-in{
+        display: inline-block;
+    }
+
+    &.mobile{
+        padding: 10px;
+    }
+}
+
+.toggle-nav{
+    font-size: 3rem;
+}
+
+.toggle-wrapper{
+    padding-right: 1rem;
+    margin-top: 1.5rem;
+}
+
+.site-wrapper{
+    // position: relative;
+    overflow-x: hidden;
+    // width: 100%;
+}
+
+// .site-menu{
+//     position: fixed;
+//     right: -30%;
+//     top: 0;
+//     background: #333;
+//     width: 30%;
+//     height: 100%;
+//     padding-top: 100px;
+// }
+
+.site-menu{
+    position: absolute;
+    right: -30%;
+    top: 0;
+    background: #333;
+    width: 30%;
+    height: 100%;
+    padding-top: 100px;
+
+    & ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        position: fixed;
+        background: #333;
+    }
+
+    & ul li a{
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: transparent;
+        color: #fff;
+    }
+
+    & ul li a:hover{
+        background: #555;
+    }
+}
+
+// .site-menu ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     text-align: center;
+// }
+// .site-menu ul li a {
+//     display: block;
+//     width: 100%;
+//     height: 50px;
+//     line-height: 50px;
+//     background: transparent;
+//     color: #fff;
+// }
+// .site-menu ul li a:hover {
+//     background: #555;
+// }
+
+#scotch-panel{
+    display: none;
+}
+
+
+
+.mobile{
+    display: block;
+}
+
+.no-mobile{
+    display: none;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 800px) {
+    .mobile{
+        display: none;
+    }
+
+    .base{
+        &.left{
+            position: fixed;
+            margin-top: 0;
+            z-index: 4;
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        &.right{
+            // overflow-y: auto;
+            margin-top: 70px;
+        }
+    }
+
+    .brand{
+        &.tech-in{
+            display: none;
+        }
+
+        &.tech-out{
+            display: block;
+        }
+
+        &.full{
+            text-align: right;
+            padding-right: 1rem;
+
+            &>a{
+                color: white;
+
+                &:hover{
+                    color: #357159;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+    .brand-wrapper{
+        background: #333;
+        height: 100%;
+    }
+
+    .nav{
+        height: 70px;
+    }
+
+    .site-menu{
+        padding-top: 70px;
+    }
+
+    .no-mobile{
+        display: block;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .nav{
+        height: 100px;
+    }
+
+    .site-menu{
+        padding-top: 100px;
+    }
+
+    .base{
+        &.right{
+            margin-top: 100px;
+        }
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

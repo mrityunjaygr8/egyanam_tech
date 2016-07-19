@@ -1,31 +1,19 @@
-$(function(){
-    console.log('var1, var2');
-    $('#scotch-panel').scotchPanel({
-        containerSelector: '#site-wrapper',
-        direction: 'right',
-        duration: 300,
-        transition: 'ease',
-        clickSelector: '.toggle-panel',
-        distanceX: '30%',
-        enableEscapeKey: true,
+var tri = function(obj){
+    $(obj.selector+'>canvas').remove();
+    var pattern = Trianglify({
+            height: obj.height(),
+            width: obj.width(),
+            cell_size: 45,
+            seed: '#333'
+        });
 
-        // beforePanelOpen: function() {
-        //     $('header').css({
-        //         '-moz-transform': 'translate3d(-30%, 0, 0)',
-        //         '-ms-transform': 'translate3d(-30%, 0, 0)',
-        //         '-o-transform': 'translate3d(-30%, 0, 0)',
-        //         '-webkit-transform': 'translate3d(-30%, 0, 0)',
-        //         'transform': 'translate3d(-30%, 0, 0)'
-        //     });
-        //   },
-        //   beforePanelClose: function() {
-        //     $('header').css({
-        //         '-moz-transform': 'translate3d(0, 0, 0)',
-        //         '-ms-transform': 'translate3d(0, 0, 0)',
-        //         '-o-transform': 'translate3d(0, 0, 0)',
-        //         '-webkit-transform': 'translate3d(0, 0, 0)',
-        //         'transform': 'translate3d(0, 0, 0)'
-        //     });
-        //   }
-    });
+    $(obj).append(pattern.canvas());
+};
+
+$(window).load(function(){
+    tri($('.left'));
+});
+
+$(window).resize(function(){
+    tri($('.left'));
 });

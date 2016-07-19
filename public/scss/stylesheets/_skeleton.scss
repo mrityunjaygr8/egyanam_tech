@@ -396,6 +396,26 @@ hr {
   display: table;
   clear: both; }
 
+.mobile{
+    display: block;
+
+    @media (min-width: 800px) {
+        &{
+            display: none;
+        }
+    }
+}
+
+.no-mobile{
+    display: none;
+
+    @media (min-width: 800px) {
+        &{
+            display: block;
+        }
+    }
+}
+
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
