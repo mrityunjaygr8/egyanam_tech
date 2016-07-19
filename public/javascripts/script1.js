@@ -1,19 +1,21 @@
 var tri = function(obj){
-    $(obj.selector+'>canvas').remove();
+    if(obj.children.length >= 2 && obj.children[1].tagName === 'CANVAS'){
+        obj.removeChild(obj.children[1]);
+    }
     var pattern = Trianglify({
-            height: obj.height(),
-            width: obj.width(),
-            cell_size: 45,
-            seed: '#333'
-        });
+        height: obj.clientHeight,
+        width: obj.clientWidth,
+        cell_size: 45,
+        seed: '#f20a41'
+    });
 
-    $(obj).append(pattern.canvas());
+    obj.appendChild(pattern.canvas());
 };
 
-$(window).load(function(){
-    tri($('.left'));
-});
+window.onload = function(){
+    tri(document.querySelector('.left'));
+};
 
-$(window).resize(function(){
-    tri($('.left'));
-});
+window.onresize = function(){
+    tri(document.querySelector('.left'));
+};
