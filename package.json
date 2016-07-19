@@ -16,6 +16,8 @@
     "morgan": "~1.7.0",
     "newrelic": "^1.28.3",
     "node-sass-middleware": "0.8.0",
+    "nodemailer": "^2.5.0",
+    "nodemailer-mailgun-transport": "^1.2.1",
     "serve-favicon": "~2.3.0"
   }
 }
