@@ -27,7 +27,6 @@ router.post('/mail', function(req, res, next){
     name = req.body.name;
     subject = req.body.subject;
     to_send = name + "<br>" + message;
-    console.log(process.env.MAILGUN_API_KEY, process.env.MAILGUN_DOMAIN);
     var auth = {
         auth: {
             api_key: process.env.MAILGUN_API_KEY,
