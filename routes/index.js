@@ -1,7 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer');
-var mg = require('nodemailer-mailgun-transport');
 
 /* GET home page. */
 router.get('/', function(req, res, next){
@@ -16,20 +14,28 @@ router.get('/test', function(req, res, next){
     res.render('test', {title: 'Test'});
 });
 
-router.get('/testmail', function(req, res, next){
+router.get('/mail', function(req, res, next){
     res.render('mail');
 });
 
 router.post('/mail', function(req, res, next){
+    var nodemailer = require('nodemailer');
+    var mg = require('nodemailer-mailgun-transport');
+
     email = req.body.email;
     message = req.body.message;
     name = req.body.name;
     subject = req.body.subject;
-
+    to_send = name + "<br>" + message;
+    // console.log(to_send);
+    console.log(process.env.MAILGUN_API_KEY, process.env.MAILGUN_DOMAIN);
     var auth = {
         auth: {
             api_key: process.env.MAILGUN_API_KEY,
             domain: process.env.MAILGUN_DOMAIN
+            // 
+            // api_key: "key-7d10d76d8fa71d785fb65ec600809a65",
+            // domain: "mg.egyanamtech.com"
         }
     };
 
@@ -37,8 +43,9 @@ router.post('/mail', function(req, res, next){
     nodeMailerMailgun.sendMail({
         from: email,
         to: process.env.MAIL_TO,
+        // to: "info@egyanamtech.com",
         subject: subject,
-        text: message+"<br>"+name
+        text: to_send
     },function (err, info) {
         if(err){
             console.log('Error: '+ err);
@@ -47,7 +54,7 @@ router.post('/mail', function(req, res, next){
         }
     });
 
-    res.json({'email': email, 'text': text, 'name': name});
+    res.json({'email': email, 'message': message, 'name': name, 'subject': subject});
 });
 
 module.exports = router;
