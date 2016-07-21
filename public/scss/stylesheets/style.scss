@@ -1,9 +1,9 @@
 @import "style1";
 
-// @font-face {
-//     font-family:'Raleway';
-//     src:url('../../fonts/Raleway-Regular.ttf');
-// }
+@font-face {
+    font-family:'Raleway';
+    src:url('../../fonts/Raleway-Regular.ttf');
+}
 
 body{
     font-family: 'Raleway', sans-serif;
@@ -35,7 +35,7 @@ a{
         position: relative;
         background: #e74c3c url('../../images/texture.png') repeat;
         height: 30vh;
-        z-index: 11;
+        z-index: 7;
 
         @media (min-width: 800px) {
             &{
@@ -92,7 +92,7 @@ a{
 
 .brand{
     color: #ecf0f1;
-    padding: 15px;
+    padding: 5px;
 }
 
 .name{
@@ -143,4 +143,8 @@ a{
             z-index: -1;
         }
     }
+}
+
+.menu{
+    width: 4rem;
 }
