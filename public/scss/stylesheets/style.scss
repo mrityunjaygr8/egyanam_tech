@@ -73,12 +73,6 @@ a{
     z-index: 9;
     overflow-y: hidden;
 
-    @media (min-width: 800px) {
-        &{
-            height: 7rem;
-        }
-    }
-
     &>.row{
         position: relative;
 
@@ -137,7 +131,8 @@ a{
     height: auto;
     &>.container{
         font-size: 1.2em;
-        
+        padding-top: 7rem;
+
         &>h3,
         &>h4{color: #FAD7A0;}
 
