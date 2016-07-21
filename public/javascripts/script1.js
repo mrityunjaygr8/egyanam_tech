@@ -1,6 +1,6 @@
 var tri = function(obj){
-    if(obj.children.length >= 2 && obj.children[1].tagName === 'CANVAS'){
-        obj.removeChild(obj.children[1]);
+    if(obj.children.length > 0 && obj.children[0].tagName === 'CANVAS'){
+        obj.removeChild(obj.children[0]);
     }
     var pattern = Trianglify({
         height: obj.clientHeight,

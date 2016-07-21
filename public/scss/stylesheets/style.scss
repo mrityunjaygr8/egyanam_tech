@@ -36,8 +36,10 @@ a{
         background: #e74c3c url('../../images/texture.png') repeat;
         height: 30vh;
         z-index: 11;
+
         @media (min-width: 800px) {
             &{
+                z-index: -1;
                 top: 0;
                 left: 0;
                 position: fixed;
@@ -71,6 +73,7 @@ a{
     top: 0;
     left: 0;
     z-index: 9;
+    overflow-y: hidden;
 
     @media (min-width: 800px) {
         &{
@@ -92,12 +95,16 @@ a{
     padding: 15px;
 }
 
-.named{
-    background: transparent;
-
-    &>.name>.h1{
+.name{
+    padding-left: 10px;
+    &>h1{
         margin: 0;
     }
+}
+
+.named{
+    background: #e74c3c url("../../images/texture.png") repeat;
+    margin: -5px;
 }
 
 .form-wrapper{

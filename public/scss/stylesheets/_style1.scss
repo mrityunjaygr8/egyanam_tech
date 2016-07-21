@@ -24,11 +24,7 @@ body{
 
 article{
     padding: 5px;
-
-    &>p{
-        color: #fef;
-        font-size: 2rem;
-    }
+    font-size: 2rem;
 }
 
 #scotch-panel{
@@ -36,6 +32,7 @@ article{
 }
 
 #fixed-nav{
+    display: none;
     position:fixed;
     height: 100%;
     top: 0;
