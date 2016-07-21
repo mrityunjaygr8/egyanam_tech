@@ -22,9 +22,11 @@ a{
     }
 }
 
+
+
 .panel{
     position: relative;
-    margin-top: 6rem;
+    margin-top: 7rem;
 
     @media (min-width: 800px) {
         margin-top: auto;
@@ -33,12 +35,11 @@ a{
         position: relative;
         background: #e74c3c url('../../images/texture.png') repeat;
         height: 30vh;
-
+        z-index: 11;
         @media (min-width: 800px) {
             &{
                 top: 0;
                 left: 0;
-                z-index: 5;
                 position: fixed;
                 height: 100%;
             }
@@ -62,14 +63,14 @@ a{
 }
 
 .header{
-    height: 6rem;
-    padding: 10px;
+    height: 7rem;
+    padding: 5px;
     background: #16a085;
     color: #2c3e50;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 9;
 
     @media (min-width: 800px) {
         &{
@@ -107,4 +108,32 @@ a{
 .btn-blue{
     background-color: #2c3e50 !important;
     color: #f39c12 !important;
+}
+
+.home{
+    @extend .coming;
+    background: #2c3e50;
+    height: auto;
+}
+
+.arriving{
+    @extend .coming;
+    @media (min-width: 800px) {
+        &{
+            height: 400px;
+        }
+    }
+}
+
+.arti{
+    @extend .coming;
+    min-height: 100vh;
+}
+
+.out{
+    @media (min-width: 800px) {
+        &{
+            z-index: -1;
+        }
+    }
 }

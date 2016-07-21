@@ -6,24 +6,16 @@ body{
 }
 
 
-header{
-    background: #937164;
-    height: 60px;
-    padding: 5px;
-    padding-right: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+.header{
     width: 100%;
-    z-index: 9;
-
-    & a{
-        font-size: 5rem;
-    }
 }
 
 #site-wrapper{
-    padding-top: 70px;
+    @media (min-width: 800px) {
+        &{
+            padding-top: 7rem;
+        }
+    }
 
     & .scotch-panel-canvas{
         z-index: 8;
@@ -31,9 +23,7 @@ header{
 }
 
 article{
-    height: 1000px;
     padding: 5px;
-    background: #333;
 
     &>p{
         color: #fef;
@@ -52,7 +42,6 @@ article{
     right: 0;
     width: 30%;
     background: saturate(#753601, 50%);
-    padding-top: 75px;
     z-index: 1;
 
     & ul{
@@ -72,6 +61,18 @@ article{
             &:hover{
                 background: saturate(#82106d, 50%);
             }
+        }
+    }
+}
+
+.fixed-height-offset{
+    height: 7rem;
+    padding: 5px;
+    background: #16a085;
+
+    @media (min-width: 800px) {
+        &{
+            // height: 8rem;
         }
     }
 }

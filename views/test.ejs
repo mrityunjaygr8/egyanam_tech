@@ -9,30 +9,46 @@
     </head>
     <body>
 
-        <header>
-            <div class="row">
-                <div class="columns six">
-                    <a href="#" class="toggle-panel">eGyanam Tech
-                        <i class="fa fa-bars"></i>
-                    </a>
+        <div class="header columns twelve">
+            <div class="row ">
+                <div class="column mobile name">
+                    <p class="h2"><a href="#"><span class="brand">eGyanam</span>Tech</a> <a href="#" class="toggle-panel"><i class="fa fa-bars"></i></a></p>
+                </div>
+
+                <div class="columns container offset-by-three six no-mobile name">
+                    <p class="h1"><a href="#">Tech</a> <a href="#" class="toggle-panel"><i class="fa fa-bars"></i></a> </p>
                 </div>
             </div>
-        </header>
+        </div>
+        <div class="row content">
+            <div class="columns three left panel out">
+                <div class="row named">
+                    <div class="columns twelve no-mobile name">
+                        <p class="h1 pull-right" style="margin-top: 10px;"><a class="brand" href="#">eGyanam</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div id="site-wrapper">
+        <div id="site-wrapper" class="row content">
             <div id="scotch-panel"></div>
 
-            <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, eaque consectetur est debitis sint veritatis alias ipsa recusandae, nulla quis nesciunt distinctio sit sed iusto rem, quos itaque. Numquam, aperiam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa fuga nesciunt, repellendus beatae. Sequi soluta, aliquid assumenda tempore. Eligendi nulla nemo, in laudantium sequi hic deserunt veniam itaque ea id.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur amet ad alias officia quas quisquam incidunt ipsa, vero, ipsum itaque, totam perspiciatis consequuntur. Natus sit dicta velit at, alias beatae.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iusto, pariatur necessitatibus. Eveniet aliquam amet ad optio praesentium. Praesentium hic unde nesciunt dolorum numquam magnam suscipit. Amet veritatis autem, facilis?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsum consequatur laboriosam consequuntur quaerat, deleniti sapiente enim dolorem rerum aliquam non maiores a odit, qui magnam ipsa minima molestiae. Rem.</p>
-            </article>
+            <div class="columns nine home offset-by-three">
+                <div class="arti">
+                    <article>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, eaque consectetur est debitis sint veritatis alias ipsa recusandae, nulla quis nesciunt distinctio sit sed iusto rem, quos itaque. Numquam, aperiam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa fuga nesciunt, repellendus beatae. Sequi soluta, aliquid assumenda tempore. Eligendi nulla nemo, in laudantium sequi hic deserunt veniam itaque ea id.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur amet ad alias officia quas quisquam incidunt ipsa, vero, ipsum itaque, totam perspiciatis consequuntur. Natus sit dicta velit at, alias beatae.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iusto, pariatur necessitatibus. Eveniet aliquam amet ad optio praesentium. Praesentium hic unde nesciunt dolorum numquam magnam suscipit. Amet veritatis autem, facilis?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsum consequatur laboriosam consequuntur quaerat, deleniti sapiente enim dolorem rerum aliquam non maiores a odit, qui magnam ipsa minima molestiae. Rem.</p>
+                    </article>
+                </div>
+            </div>
         </div>
 
         <div id="fixed-nav">
-            <ul>
+            <div class="column fixed-height-offset"><p class="h1">Menu</div>
+            <ul style="margin-top: 8rem;">
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
@@ -41,8 +57,9 @@
             </ul>
         </div>
 
-        <script type="text/javascript" src="/javascripts/jquery.js"></script>
+        <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
         <script type="text/javascript" src="/javascripts/scotchPanels.min.js"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
         <script type="text/javascript" src="/javascripts/script.js"></script>
     </body>
 </html>
