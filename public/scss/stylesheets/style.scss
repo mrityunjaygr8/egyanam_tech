@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    color: #f39c12;
+    color: #f4f6f9;
     background: #2c3e50;
     margin: 0;
     padding: 0;
@@ -52,14 +52,12 @@ a{
 .coming{
     position: static;
     height: auto;
-    padding: 15px;
 
     @media (min-width: 800px) {
         &{
             height: 400px;
             position: relative;
             top: 50%;
-            padding: 5px;
         }
     }
 }
@@ -121,6 +119,7 @@ a{
     @extend .coming;
     background: #2c3e50;
     height: auto;
+    padding: 0;
 }
 
 .arriving{
@@ -135,6 +134,20 @@ a{
 .arti{
     @extend .coming;
     min-height: 100vh;
+    height: auto;
+    &>.container{
+        font-size: 1.2em;
+        
+        &>h3,
+        &>h4{color: #FAD7A0;}
+
+        &>ul>li{
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+
+    }
 }
 
 .out{
@@ -147,4 +160,22 @@ a{
 
 .menu{
     width: 4rem;
+}
+
+.hero{
+    max-width: 100%;
+    height: auto;
+}
+
+.img-text{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: #415b76;
+    z-index: 3;
+}
+
+::selection{
+    background: #f2baba;
+    color: #333;
 }
