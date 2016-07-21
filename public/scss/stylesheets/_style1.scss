@@ -37,8 +37,8 @@ article{
     height: 100%;
     top: 0;
     right: 0;
-    width: 30%;
-    background: saturate(#753601, 50%);
+    width: 40%;
+    background: #FAD7A0;
     z-index: 1;
 
     & ul{
@@ -53,10 +53,10 @@ article{
             height: 50px;
             line-height: 50px;
             background: transparent;
-            color: #eff;
+            color: #2c3e50;
 
             &:hover{
-                background: saturate(#82106d, 50%);
+                background: darken(#FAD7A0, 10%);
             }
         }
     }
