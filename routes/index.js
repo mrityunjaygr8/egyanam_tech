@@ -6,6 +6,10 @@ router.get('/', function(req, res, next){
     res.render('coming');
 });
 
+router.get('/google616cfbadc2a5e097.html', function(req, res, next){
+    res.render('google616cfbadc2a5e097')
+})
+
 router.get('/bench', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
