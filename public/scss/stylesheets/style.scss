@@ -100,7 +100,6 @@ a{
 }
 
 .form-wrapper{
-    background: #333;
     padding: 15px;
 }
 
@@ -172,5 +171,25 @@ a{
 
 ::selection{
     background: #f2baba;
+    color: #333;
+}
+
+.footer{
+    height: 100px;
+    background: #654de2;
+}
+
+.contact{
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    & h4{
+        color: #FAD7A0;
+    }
+}
+
+input,
+textarea{
+    width: 25rem;
     color: #333;
 }

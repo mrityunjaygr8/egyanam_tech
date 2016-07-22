@@ -24,6 +24,10 @@ $(function() {
         $('.named').width($('.left').width());
     };
 
+    $('.nav-link').click(function(){
+        $('.toggle-panel.pull-right').click();
+    });
+
     $('#fixed-nav').show();
 
     $('#scotch-panel').scotchPanel({
