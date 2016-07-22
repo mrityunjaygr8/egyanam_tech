@@ -10,23 +10,23 @@ router.get('/google616cfbadc2a5e097.html', function(req, res, next){
     res.render('google616cfbadc2a5e097');
 });
 
-router.get('/bench', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// router.get('/bench', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
 
 router.get('/test', function(req, res, next){
     res.render('test', {title: 'Test'});
 });
 
-router.post('/mail', function(req, res){
+router.post('/mail', function(req, res, next){
     var nodemailer = require('nodemailer');
     var mg = require('nodemailer-mailgun-transport');
 
     email = req.body.email;
-    message = req.body.message;
+    requirement = req.body.req;
     name = req.body.name;
-    subject = req.body.subject;
-    to_send = name + "<br>" + message;
+    org = req.body.org;
+    to_send = name + " - " + org;
     var auth = {
         auth: {
             api_key: process.env.MAILGUN_API_KEY,
@@ -38,8 +38,8 @@ router.post('/mail', function(req, res){
     nodeMailerMailgun.sendMail({
         from: email,
         to: process.env.MAIL_TO,
-        subject: subject,
-        text: to_send
+        subject: to_send,
+        text: requirement
     },function (err, info) {
         if(err){
             console.log('Error: '+ err);
@@ -48,7 +48,7 @@ router.post('/mail', function(req, res){
         }
     });
 
-    res.json({'email': email, 'message': message, 'name': name, 'subject': subject});
+    res.json({'email': email, 'to_send': to_send, 'requirement': requirement});
 });
 
 module.exports = router;
