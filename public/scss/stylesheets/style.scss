@@ -15,10 +15,11 @@ body{
 
 a{
     text-decoration: none;
-    color: #2c3e50;
+    color: #FAD7A0;
+    cursor: pointer;
 
     &:hover{
-        color: saturate(#f39c12, 25%);
+        color: saturate(#2c3e50, 25%);
     }
 }
 
@@ -164,9 +165,13 @@ a{
 .img-text{
     position: absolute;
     top: 5%;
-    left: 10%;
-    color: #415b76;
+    right: 5%;
+    // color: #2c3e50;
+    color: #ecf0f1;
     z-index: 3;
+    padding-right: 5px;
+    text-align: right;
+
 }
 
 ::selection{
@@ -175,8 +180,12 @@ a{
 }
 
 .footer{
-    height: 100px;
-    background: #654de2;
+    padding: 10px;
+    // background: #654de2;
+    background: #16a085;
+    // background: #e74c3c url("../../images/texture.png") repeat;
+    text-align: center;
+    color: #bdc3c7;
 }
 
 .contact{
@@ -186,6 +195,18 @@ a{
     & h4{
         color: #FAD7A0;
     }
+}
+
+q{
+    display: inline;
+
+    // &:before{
+    //     content:  ;
+    // }
+
+    // &:after{
+    //     content:  ;
+    // }
 }
 
 input,
