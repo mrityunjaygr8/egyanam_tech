@@ -136,7 +136,7 @@ a{
         &>h4{color: #FAD7A0;}
 
         &>ul>li{
-            list-style-type: none;
+            list-style: square inside none;
             padding-left: 20px;
         }
 
@@ -185,6 +185,15 @@ a{
     background: rgba(255, 255, 255, 0.05);
     & h4{
         color: #FAD7A0;
+    }
+}
+
+.border-left{
+    @media (min-width: 800px) {
+        &{
+            border-left: 1px solid lime;
+            padding-left: 30px;
+        }
     }
 }
 
