@@ -131,12 +131,17 @@ a{
         font-size: 1.2em;
         padding-top: 7rem;
 
-        &>h3,
+        &>h3{color: darken(#FAD7A0, 35%);}
         &>h4{color: #FAD7A0;}
 
         &>ul>li{
-            list-style: square inside none;
+            list-style: none;
             padding-left: 20px;
+
+            &:before{
+                content: '\221E';
+                font-weight: 300;
+            }
         }
 
 
