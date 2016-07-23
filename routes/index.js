@@ -19,14 +19,21 @@ router.get('/test', function(req, res, next){
 });
 
 router.post('/mail', function(req, res, next){
-    var nodemailer = require('nodemailer');
-    var mg = require('nodemailer-mailgun-transport');
+    mail(req);
 
+    res.redirect('/test');
+});
+
+var mail = function(req){
     email = req.body.email;
     requirement = req.body.req;
     name = req.body.name;
     org = req.body.org;
     to_send = name + " - " + org;
+
+    var nodemailer = require('nodemailer');
+    var mg = require('nodemailer-mailgun-transport');
+
     var auth = {
         auth: {
             api_key: process.env.MAILGUN_API_KEY,
@@ -47,8 +54,6 @@ router.post('/mail', function(req, res, next){
             console.log('Response: '+ info);
         }
     });
-
-    res.json({'email': email, 'to_send': to_send, 'requirement': requirement});
-});
+};
 
 module.exports = router;

@@ -5,14 +5,17 @@
         <title><%= title %></title>
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.7/typicons.min.css"> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="/javascripts/ang.js"></script>
     </head>
-    <body>
+    <body ng-app="contact" ng-controller="ContactCtrl">
 
         <div class="header columns twelve">
             <div class="row ">
                 <div class="column mobile name">
-                    <p class="h2"><a href="#"><span class="brand">eGyanam</span>Tech</a> <a href="#" class="toggle-panel"><img src="/images/menu.svg" class="menu" alt="Menu"></a></p>
+                    <p class="h2"><a href="#"><span class="brand">eGyanam</span>Tech</a> <a href="#" class="toggle-panel pull-right"><!-- <i class="typcn typcn-th-menu"></i> --> &#8801; </a></p>
                 </div>
                 <div class="columns three no-mobile named">
                     <p class="h1 pull-right" style="margin-left:10px;"><a href="#" class="brand pull-right">eGyanam</a></p>
@@ -22,7 +25,7 @@
                 </div>
 
                 <div class="columns one offset-by-six no-mobile pull-right">
-                    <p class="h1"><a href="#" class="toggle-panel pull-right"><img src="/images/menu.svg" class="menu" alt="Menu"></a></p>
+                    <p class="h1"><a href="#" class="toggle-panel pull-right"><!-- <i class="fa fa-bars"></i> --> &#8801; </a></p>
                 </div>
             </div>
         </div>
@@ -38,9 +41,9 @@
                     <div class="img full columns twelve">
                         <img src="/images/img.jpg" alt="image" class="hero">
                         <div class="img-text">
-                            <q class="h1 no-mobile">The user's going to pick dancing pigs over security every time</q>
+                            <q class="h1 no-mobile">The user's going to pick dancing pigs over security every time </q>
 
-                            <q class="h3 mobile">The user's going to pick dancing pigs over security every time</q>
+                            <q class="h3 mobile"> The user's going to pick dancing pigs over security every time</q>
 
                             <small class="h5 center"> -Bruce Schneier</small>
                         </div>
@@ -141,11 +144,14 @@
                             <div class="columns six border-left">
                                 <div class="form-wrapper">
                                     <h4>Get in Touch</h4>
-                                    <form action="/mail" method="post" id="contact_f">
-                                        <div class="row column"><input type="text" name="name" placeholder="Your Name" required></div>
-                                        <div class="row"><input type="text" name="org" placeholder="Your Organisation" required></div>
-                                        <div class="row"><input type="email" name="email" placeholder="Your Email" required></div>
-                                        <div class="row"><textarea name="req" placeholder="Your Requirement" cols="20" rows="40" form="contact_f" required></textarea></div>
+                                    <form id="contact_f" ng-submit="submitForm()">
+                                        <div class="row column"><input type="text" name="name" placeholder="Your Name" required ng-model="name"></div>
+                                        <div class="row"><input type="text" name="org" placeholder="Your Organisation" required ng-model="org"></div>
+                                        <div class="row"><input type="email" name="email" placeholder="Your Email" required ng-model="email"></div>
+                                        <div class="row"><textarea name="req" placeholder="Your Requirement" cols="20" rows="40" form="contact_f" ng-model="req" required></textarea></div>
+                                        <!-- <div class="row">
+                                            <div class="g-recaptcha" data-sitekey="6LfOyCUTAAAAAGgq4iTrKysPUbShKh8zTuOnGtDT"></div>
+                                        </div> -->
                                         <div class="row"><input type="submit" class="btn-blue"></div>
                                     </form>
                                 </div>
@@ -158,9 +164,10 @@
                         <div class="row">
                             <div class="columns three center">
                                 <h5><small>Address</small></h5>
-                                <p><small>C-803, Callisto</small></p>
-                                <p><small>Near Dutta Mandir, Wakad</small></p>
-                                <p><small>Pune, India</small></p><br>
+                                <small>C-803, Callisto</small> <br>
+                                <small>Near Dutta Mandir</small> <br>
+                                <small>Wakad</small> <br>
+                                <small>Pune, India</small> <br> <br>
                             </div>
                             <div class="columns three center pull-right">
                                 <p>saghfdh</p>
@@ -192,8 +199,9 @@
         </div>
 
         <script type="text/javascript" src="/javascripts/jquery.js"></script>
-        <script async type="text/javascript" src="/javascripts/scotchPanels.min.js"></script>
+        <script type="text/javascript" src="/javascripts/scotchPanels.min.js"></script>
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
         <script async type="text/javascript" src="/javascripts/script.js"></script>
+        <!-- // <script src='https://www.google.com/recaptcha/api.js'></script> -->
     </body>
 </html>

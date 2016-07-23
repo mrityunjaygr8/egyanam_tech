@@ -14,6 +14,18 @@ $(function() {
         obj.appendChild(pattern.canvas());
     };
 
+    // $('#contact_f').submit(function(){
+    //     $(this).ajaxSubmit({
+    //         error: function(xhr) {
+    //         status('Error: ' + xhr.status);
+    //         },
+    //         success: function(response) {
+    //         console.log(response);
+    //         }
+    //     });
+    //     return false;
+    // });
+
     window.onload = function(){
         tri(document.querySelector('.left'));
         $('.named').width($('.left').width());
