@@ -207,6 +207,16 @@ a{
         &{
             border-left: 1px solid #FAD7A0;
             padding-left: 30px;
+            margin-left: -1px;
+        }
+    }
+}
+
+.border-right{
+    @media (min-width: 800px) {
+        &{
+            border-right: 1px solid #FAD7A0;
+            padding-right: 30px;
         }
     }
 }
