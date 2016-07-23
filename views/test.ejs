@@ -128,7 +128,6 @@
 
                     <div class="contact container" id="contact">
                         <h3 class="text-center">Contact Us</h3>
-                        <p>{{response}}</p>
                         <div class="row container">
                             <div class="columns six" style="padding-top: 15px;">
                                 <div class="address-wrapper">
@@ -143,8 +142,9 @@
                                 </div>
                             </div>
                             <div class="columns six border-left">
-                                <div class="form-wrapper">
-                                    <h4>Get in Touch</h4>
+                                <h4>Get in Touch</h4>
+                                <div class="form-wrapper" ng-hide="response">
+                                    
                                     <form id="contact_f" ng-submit="submitForm()">
                                         <div class="row column"><input type="text" name="name" placeholder="Your Name" required ng-model="name"></div>
                                         <div class="row"><input type="text" name="org" placeholder="Your Organisation" required ng-model="org"></div>
@@ -156,6 +156,7 @@
                                         <div class="row"><input type="submit" class="btn-blue"></div>
                                     </form>
                                 </div>
+                                <p ng-show="response">{{response}}</p>
                             </div>
                         </div>
                     </div>

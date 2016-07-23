@@ -11,7 +11,7 @@ app.controller('ContactCtrl', ['$scope', '$http',function ($scope, $http) {
 
         $http.post('/mail', submit_data).
             success(function(data){
-                $scope.response = data.name + " your interest has been lodged.We will contact you shortly."
+                $scope.response = "We will be in touch shortly.";
             });
 
         $scope.name = '';
