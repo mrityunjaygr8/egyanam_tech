@@ -19,9 +19,8 @@ router.get('/test', function(req, res, next){
 });
 
 router.post('/mail', function(req, res, next){
-    mail(req);
-
-    res.redirect('/test');
+    data = mail(req);
+    res.json(data);
 });
 
 var mail = function(req){
@@ -54,6 +53,8 @@ var mail = function(req){
             console.log('Response: '+ info);
         }
     });
+
+    return {'email': email, 'name': name, 'org': org, 'requirement': requirement};
 };
 
 module.exports = router;
