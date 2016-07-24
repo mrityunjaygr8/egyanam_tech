@@ -5,6 +5,14 @@
 //     src:url('../../fonts/Raleway-Regular.ttf');
 // }
 
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+
 body{
     font-family: 'Raleway', sans-serif;
     color: #f4f6f9;
@@ -104,7 +112,7 @@ a{
 
 .btn-blue{
     background-color: #2c3e50 !important;
-    color: #f39c12 !important;
+    color: darken(#FAD7A0, 35%) !important;
 }
 
 .home{
@@ -184,11 +192,24 @@ a{
 
 .footer{
     padding: 10px;
-    // background: #654de2;
     background: #16a085;
-    // background: #e74c3c url("../../images/texture.png") repeat;
     text-align: center;
     color: #bdc3c7;
+
+    &>.row>.three {
+        // background: #fff;
+        margin: 5px;
+    }
+}
+
+.footer-stuff{
+    &>ul>li {
+        list-style-type: none;
+
+        &>a{
+            padding-left: 10px;
+        }
+    }
 }
 
 .contact{
@@ -207,24 +228,6 @@ a{
     }
 }
 
-.border-left{
-    @media (min-width: 800px) {
-        &{
-            border-left: 1px solid #FAD7A0;
-            padding-left: 30px;
-            margin-left: -1px;
-        }
-    }
-}
-
-.border-right{
-    @media (min-width: 800px) {
-        &{
-            border-right: 1px solid #FAD7A0;
-            padding-right: 30px;
-        }
-    }
-}
 q{
     display: inline;
 
@@ -240,6 +243,10 @@ q{
 input,
 textarea,
 #contact_f>.row{
-    width: 25rem;
+    width: 100%;
     color: #333;
+}
+
+textarea{
+    height: 10rem;
 }
