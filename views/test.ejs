@@ -54,16 +54,16 @@
                         <p>eGyanam technical services (ETS) provides premium consulting and implementation services in the following areas:
                             <ul>
                                 <li>
-                                    <a href="#csd">Cyber Security</a>
+                                    <a href="#csd"><strong>Cyber Security</strong></a>
                                 </li>
                                 <li>
-                                    <a href="#aml">Analytics and Machine Learning</a>
+                                    <a href="#aml"><strong>Analytics and Machine Learning</strong></a>
                                 </li>
                                 <li>
-                                    <a href="#mwd">Mobility and Web Strategies</a>
+                                    <a href="#mwd"><strong>Mobility and Web Strategies</strong></a>
                                 </li>
                                 <li>
-                                    <a href="#tr">Training and Resources</a>
+                                    <a href="#tr"><strong>Training and Resources</strong></a>
                                 </li>
                             </ul>
                         </p>
@@ -131,9 +131,9 @@
                         <h3 class="text-center">Contact Us</h3>
                         <div class="row container">
                             <div class="column">
-                                <h4>Get in Touch</h4>
+                                <h4 ng-show="response">{{response}}</h4>
                                 <div class="form-wrapper" ng-hide="response">
-                                    
+                                    <h4>Get in Touch</h4>
                                     <form id="contact_f" ng-submit="submitForm()">
                                         <div class="row column"><input type="text" name="name" placeholder="Your Name" required ng-model="name"></div>
                                         <div class="row"><input type="text" name="org" placeholder="Your Organisation" required ng-model="org"></div>
@@ -145,7 +145,7 @@
                                         <div class="row"><input type="submit" class="btn-blue"></div>
                                     </form>
                                 </div>
-                                <p ng-show="response">{{response}}</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                                     <li><small><a href="https://www.facebook.com/egyanamtech/" class="zocial-facebook" target="_blank"> Facebook</a></small></li>
                                     <li><small><a href="https://twitter.com/egyanamtech" class="zocial-twitter" target="_blank"> Twitter</a></small></li>
                                     <li><small><a href="https://www.linkedin.com/company/egyanam-tech-services" target="_blank" class="zocial-linkedin"> Linkedin</a></small></li>
-                                    <li><small><a href="" target="_blank" class="zocial-googleplus"> Google+</a></small></li>
+                                    <!-- <li><small><a href="" target="_blank" class="zocial-googleplus"> Google+</a></small></li> -->
                                 </ul>
                             </div>
                             <div class="columns four center footer-stuff pull-right">
@@ -186,7 +186,7 @@
                                     <li><small><a href="https://www.facebook.com/egyanamtech/" target="_blank" class="zocial-facebook"> Facebook</a></small></li>
                                     <li><small><a href="https://twitter.com/egyanamtech" target="_blank" class="zocial-twitter"> Twitter</a></small></li>
                                     <li><small><a href="https://www.linkedin.com/company/egyanam-tech-services" target="_blank" class="zocial-linkedin"> Linkedin</a></small></li>
-                                    <li><small><a href="" target="_blank" class="zocial-googleplus"> Google+</a></small></li>
+                                    <!-- <li><small><a href="" target="_blank" class="zocial-googleplus"> Google+</a></small></li> -->
                                 </ul>
                             </div>
 
