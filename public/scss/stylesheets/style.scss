@@ -196,9 +196,8 @@ a{
     text-align: center;
     color: #bdc3c7;
 
-    &>.row>.three {
-        // background: #fff;
-        margin: 5px;
+    &>.row>.four {
+        padding: 5px;
     }
 }
 
@@ -249,4 +248,8 @@ textarea,
 
 textarea{
     height: 10rem;
+}
+
+.intro>ul>li>a:hover{
+    color: #dc8b0c;
 }
