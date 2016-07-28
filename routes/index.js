@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next){
-    res.render('coming');
+    res.render('test', {title: 'Egyanam Technical Services'});
 });
 
 router.get('/google616cfbadc2a5e097.html', function(req, res, next){
@@ -14,9 +14,9 @@ router.get('/google616cfbadc2a5e097.html', function(req, res, next){
 //   res.render('index', { title: 'Express' });
 // });
 
-router.get('/test', function(req, res, next){
-    res.render('test', {title: 'Test'});
-});
+// router.get('/test', function(req, res, next){
+//     res.render('test', {title: 'Test'});
+// });
 
 router.post('/mail', function(req, res, next){
     data = mail(req);

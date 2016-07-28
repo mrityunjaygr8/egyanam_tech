@@ -61,10 +61,10 @@ a{
 .coming{
     position: static;
     height: auto;
-
+    
     @media (min-width: 800px) {
         &{
-            height: 400px;
+            min-height: 400px;
             position: relative;
             top: 50%;
         }
@@ -133,7 +133,7 @@ a{
 
 .arti{
     @extend .coming;
-    min-height: 100vh;
+    // min-height: 60vh;
     height: auto;
     &>.container{
         font-size: 1.2em;
@@ -252,4 +252,11 @@ textarea{
 
 .intro>ul>li>a:hover{
     color: #dc8b0c;
+}
+
+.error {
+    min-height: 60vh;
+    & a:hover{
+        color: saturate(#16a085, 25%);
+    }
 }
