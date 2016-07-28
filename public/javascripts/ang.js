@@ -1,9 +1,7 @@
 var app = angular.module('contact', []);
 
 app.factory('form', ['$http', function($http){
-    var f = {
-        f_data: []
-    };
+    var f_submit = 
 
     // f.submit = function(f_data){
     //     return $http.post('/mail', post)
