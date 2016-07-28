@@ -24,8 +24,13 @@ $(function() {
         $('.named').width($('.left').width());
     };
 
-    $('.nav-link').click(function(){
+    $('.nav-link').click(function(event){
+        event.preventDefault();
         $('#nav-toggle').click();
+        $('html, body').animate({
+            scrollTop: $(this.getAttribute("href")).offset().top
+        }, 500);
+        return false;
     });
 
     $('#fixed-nav').show();
