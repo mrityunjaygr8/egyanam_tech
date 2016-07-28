@@ -1,30 +1,22 @@
 var app = angular.module('contact', []);
 
-app.factory('form', ['$http', function($http){
-    var f_submit = 
+app.controller('ContactCtrl', ['$scope', '$http',function ($scope, $http) {
+    $scope.submitForm = function(){
+        var submit_data = {
+            name: $scope.name,
+            org: $scope.org,
+            email: $scope.email,
+            req: $scope.req
+        };
 
-    // f.submit = function(f_data){
-    //     return $http.post('/mail', post)
-    //         .success(function(){
-    //             console.log('success');
-    //         });
-    // };
+        $http.post('/mail', submit_data).
+            success(function(data){
+                $scope.response = "We will be in touch shortly.";
+            });
 
-}]);
-
-app.controller('ContactCtrl', ['$scope', 'form', function ($scope, form) {
-    // $scope.f = form.f;
-    // $scope.submitForm = function(){
-    //     f.submit({
-    //         name: $scope.name,
-    //         org: $scope.org,
-    //         email: $scope.email,
-    //         req: $scope.req
-    //     });
-
-    //     $scope.name = '';
-    //     $scope.org = '';
-    //     $scope.email = '';
-    //     $scope.req = '';
-    // };
+        $scope.name = '';
+        $scope.org = '';
+        $scope.email = '';
+        $scope.req = '';
+    };
 }]);

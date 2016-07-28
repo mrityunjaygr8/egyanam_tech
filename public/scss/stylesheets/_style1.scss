@@ -55,6 +55,12 @@ article{
             background: transparent;
             color: #2c3e50;
 
+            @media (min-width: 800px) {
+                &{
+                    line-height: 50px;
+                }
+            }
+
             &:hover{
                 background: darken(#FAD7A0, 10%);
             }
