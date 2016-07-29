@@ -24,6 +24,14 @@ $(function() {
         $('.named').width($('.left').width());
     };
 
+    $('.list-links').click(function(event){
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(this.getAttribute("href")).offset().top
+        }, 500);
+        return false;
+    });
+
     $('.nav-link').click(function(event){
         event.preventDefault();
         $('#nav-toggle').click();
