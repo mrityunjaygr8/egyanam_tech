@@ -14,6 +14,7 @@ $(function() {
         obj.appendChild(pattern.canvas());
     };
 
+
     window.onload = function(){
         tri(document.querySelector('.left'));
         $('.named').width($('.left').width());
